@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- 2. Internal CSS - applied to many elements in one document -->
+    <style>
+        .my-style {
+            color: purple;
+            font-family: Arial;
+        }
+
+        .my-style2 {
+            color: blueviolet;
+            font-family: sans-serif;
+        }
+    </style>
+
+    <!-- 3. External CSS - applied to many elements in many documents -->
+    <link rel="stylesheet" href="./style.css">
+
+
+
+</head>
+
+<body>
+    <h1>HTML with CSS</h1>
+    <p>CSS is used to style HTML.</p>
+
+    <p>This is some text in plain HTML.</p>
+    <!-- 1. Inline CSS - applied to only one element -->
+    <p style="color: blue; font-family: Arial;">This is some text styled with CSS - Inline CSS</p>
+    <!-- 2. Internal CSS - applied to many elements in one document -->
+    <p class="my-style">This is some text styled with CSS - Internal CSS</p>
+    <p class="my-style">This is some text styled with CSS - Internal CSS</p>
+    <p class="my-style2">This is some text styled with CSS - Internal CSS</p>
+    <!-- 3. External CSS - applied to many elements in many documents -->
+    <p class="my-style4">This is some text styled with CSS - External CSS</p>
+
+</body>
+
+</html>
