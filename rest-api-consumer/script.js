@@ -42,7 +42,6 @@ const getAllEmps = () => {
                 table.appendChild(tr);
             }
             document.body.appendChild(table);
-            document.getElementById('empData').innerHTML = empTable;
         })
         .catch((error) => {
             console.log(error.message);
