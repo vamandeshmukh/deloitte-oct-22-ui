@@ -1,12 +1,14 @@
 // node 04-js-array-object.js
 
 // arrays in JS 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 const myArray = [10, 20, 25.50, "abc", false];
 
 // myArray.forEach();
 
 // objects in JS 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 
 const empData = {
     employeeId: 101,
