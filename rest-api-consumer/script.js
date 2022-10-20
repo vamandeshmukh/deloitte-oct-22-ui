@@ -20,9 +20,9 @@ const getAllEmps = () => {
     fetch(url)
         .then((data) => data.json())
         .then((json) => {
-            console.log(json);
             let table = document.createElement('empTable');
             for (let i = 0; i < json.length; i++) {
+                console.log(json[i]);
                 let tr = document.createElement('tr');
                 let td1 = document.createElement('td');
                 let td2 = document.createElement('td');
