@@ -4,3 +4,9 @@
 
 console.log("JavaScript Introduction");
 
+
+function fun () {
+    console.log("fun function invoked.");
+}
+
+fun();
