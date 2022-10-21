@@ -31,20 +31,46 @@
     </div>
     <div class="container mt-3">
         <div class="shadow bg-white my-3 px-3 py-3">
-            <p class="lead">Get All Employees</p>
-            <button class="btn btn-primary mt-3 col-2" type="button" onclick="getAllEmps()">Get All Employees</button>
-            <div class="my-3 py-3 " id="empList"></div>
+            <p class="lead">Search Employee By Id</p>
+            <div>
+                <form class="form form-group">
+                    <input class="form-control mt-3 col-2" type="number" id="eid" placeholder="Enter Employee Id"
+                        autofocus />
+                    <button class="btn btn-outline-primary mt-3 col-2" type="button" onclick="getEmpById(eid.value)">Search
+                        Employee</button>
+                </form>
+                <div class="mt-3" id="empData"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 shadow bg-white mx-3 my-3 px-3 py-3">
+                <p class="lead">Add a New Employee</p>
+                <form class="form form-group" id="addEmpForm">
+                    <input class="form-control mt-3" type="text" id="firstName" placeholder="Enter First Name" />
+                    <input class="form-control mt-3" type="number" id="salary" placeholder="Enter Salary" />
+                    <input class="form-control mt-3" type="number" id="departmentId"
+                        placeholder="Enter Department Id" />
+                    <button class="btn btn-outline-primary mt-3" type="button" onclick="addEmp()">Add Employee</button>
+                </form>
+                <p class="mt-3" id="empAdded"></p>
+            </div>
+            <div class="col-4 shadow bg-white mx-3 my-3 px-3 py-3">
+                <p class="lead">Update an Employee</p>
+                <form class="form form-group" id="updateEmpForm">
+                    <input class="form-control mt-3" type="text" id="updateEmployeeId" placeholder="Enter Employee Id" />
+                    <input class="form-control mt-3" type="text" id="updateFirstName" placeholder="Enter First Name" />
+                    <input class="form-control mt-3" type="number" id="updateSalary" placeholder="Enter Salary" />
+                    <input class="form-control mt-3" type="number" id="updateDepartmentId"
+                        placeholder="Enter Department Id" />
+                    <button class="btn btn-outline-primary mt-3" type="button" onclick="updateEmp()">Update Employee</button>
+                </form>
+                <p class="mt-3" id="empUpdated"></p>
+            </div>
         </div>
         <div class="shadow bg-white my-3 px-3 py-3">
-            <p class="lead">Add a New Employee</p>
-            <form class="form form-group" id="addEmpForm">
-                <input class="form-control mt-3 col-2" type="text" id="firstName" placeholder="Enter First Name" />
-                <input class="form-control mt-3 col-2" type="number" id="salary" placeholder="Enter Salary" />
-                <input class="form-control mt-3 col-2" type="number" id="departmentId"
-                    placeholder="Enter Department Id" />
-                <button class="btn btn-primary mt-3 col-2" type="button" onclick="addEmp()">Add Employee</button>
-            </form>
-            <p class="mt-3" id="empAdded"></p>
+            <p class="lead">Get All Employees</p>
+            <button class="btn btn-outline-primary mt-3 col-2" type="button" onclick="getAllEmps()">Get All Employees</button>
+            <div class="my-3 py-3 " id="empList"></div>
         </div>
     </div>
 </body>
