@@ -35,6 +35,17 @@
             <button class="btn btn-primary mt-3 col-2" type="button" onclick="getAllEmps()">Get All Employees</button>
             <div class="my-3 py-3 " id="empList"></div>
         </div>
+        <div class="shadow bg-white my-3 px-3 py-3">
+            <p class="lead">Add a New Employee</p>
+            <form class="form form-group" id="addEmpForm">
+                <input class="form-control mt-3 col-2" type="text" id="firstName" placeholder="Enter First Name" />
+                <input class="form-control mt-3 col-2" type="number" id="salary" placeholder="Enter Salary" />
+                <input class="form-control mt-3 col-2" type="number" id="departmentId"
+                    placeholder="Enter Department Id" />
+                <button class="btn btn-primary mt-3 col-2" type="button" onclick="addEmp()">Add Employee</button>
+            </form>
+            <p class="mt-3" id="empAdded"></p>
+        </div>
     </div>
 </body>
 

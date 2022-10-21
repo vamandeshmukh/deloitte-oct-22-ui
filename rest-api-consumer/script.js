@@ -16,3 +16,35 @@ const getAllEmps = () => {
         });
 }
 
+const addEmp = () => {
+    console.log(`addEmp`);
+    fetch(`${restApi}/add-emp`, {
+        body: JSON.stringify({
+            firstName: document.getElementById("firstName").value,
+            salary: document.getElementById("salary").value,
+            department: {
+                departmentId: document.getElementById("departmentId").value
+            }
+        }),
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(data => data.json())
+        .then((json) => {
+            response = JSON.stringify(json);
+            console.log(response);
+            document.getElementById("empAdded").innerHTML = response;
+            document.getElementById("firstName").value = '';
+            document.getElementById("salary").value = '';
+            document.getElementById("departmentId").value = '';
+        })
+        .catch(() => {
+            document.getElementById("empAdded").innerHTML = 'Something is wrong!';
+            document.getElementById("firstName").value = '';
+            document.getElementById("salary").value = '';
+            document.getElementById("departmentId").value = '';
+        });
+}
+
